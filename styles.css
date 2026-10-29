@@ -101,7 +101,7 @@ body {
     padding-left: 10px;
 }
 
-.crypto-generator__copy-btn {
+.crypto-generator__copy-btn, .crypto-generator__delete-btn {
     position: absolute;
     right: 10px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -110,7 +110,15 @@ body {
     transition: 0.2s;
 }
 
-.crypto-generator__copy-btn:active {
+.crypto-generator__delete-btn {
+    top: 8px;
+    right: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.crypto-generator__copy-btn:active, .crypto-generator__delete-btn:active {
     transition: 0.2s;
     transform: scale(0.95);
 }

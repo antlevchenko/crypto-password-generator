@@ -3,6 +3,7 @@
 const passwordInputEl = document.querySelector('[data-js-password]');
 const passwordLengthEl = document.querySelector('[data-js-length]');
 const copyBtnEl = document.querySelector('[data-js-copy]');
+const deleteBtnEl = document.querySelector('[data-js-delete]');
 const generateBtnEl = document.querySelector('[data-js-generate]');
 const errorLengthMessage = document.querySelector('.error-length');
 const errorCheckboxMessage = document.querySelector('.error-checkbox');
@@ -113,5 +114,12 @@ function copyPassword() {
     }, 2000);
 }
 
+function deletePassword(event) {
+    if (event.target === deleteBtnEl) {
+        passwordInputEl.value = '';
+    }
+}
+
 generateBtnEl.addEventListener('click', generateCryptoPassword);
 copyBtnEl.addEventListener('click', copyPassword);
+deleteBtnEl.addEventListener('click', deletePassword);
